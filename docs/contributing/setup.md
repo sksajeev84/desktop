@@ -26,15 +26,24 @@ You will need to install these tools on your machine:
 
 ## Verification
 
-With these things installed, open a shell and validate you have these commands
-available and that the versions look similar:
+With these things installed, open a shell and bump `npm` to v5 (you might need
+to `sudo` here depending on how Node was installed):
+
+```
+> npm install -g npm@5.4.2
+```
+
+This is important because v5 has improved lock-file support. If you find
+yourself changing packages, this will prevent mismatches in versions between machines.
+
+Then validate you have these commands available and that the versions look similar:
 
 ```
 > node -v
 v7.8.0
 
 > npm -v
-4.2.0
+5.4.2
 
 > python --version
 Python 2.7.13
